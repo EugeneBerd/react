@@ -40,6 +40,8 @@ class ItemCard extends PureComponent {
   componentDidUpdate() {
     if (this.props.fav.includes(this.props.item.id)) {
       this.setState({ fav: true });
+    } else {
+      this.setState({ fav: false });
     }
   }
 }

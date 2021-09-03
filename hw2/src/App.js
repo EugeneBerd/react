@@ -20,8 +20,10 @@ class App extends React.Component {
             addToFavs={this.addToFavs}
             items={this.state.pricelist}
             modal={this.state.modal}
+            toggleModal={() => this.toggleModal()}
+            cart={this.state.cart}
           />
-          <Cart cart={this.state.cart.length} />
+          <Cart icon className="cart" cart={this.state.cart.length} />
         </header>
       </div>
     );
@@ -32,6 +34,18 @@ class App extends React.Component {
       localStorage.setItem("store", JSON.stringify(res.data));
     });
   }
+
+  toggleModal = () => {
+    console.log("first modal on click");
+    this.setState({ modal: false }, console.log("second modal on click"));
+  };
+
+  addToCart = (itemId) => {
+    this.setState(
+      { cart: [...this.state.cart, itemId], modal: !this.state.modal },
+      () => localStorage.setItem("cart", JSON.stringify(this.state.cart))
+    );
+  };
 }
 
 export default App;

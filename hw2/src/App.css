@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.cart {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 60px;
+  top: 10px;
+  left: 10px;
+  background: white;
+  color: black;
+  padding: 10px 15px 20px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+}

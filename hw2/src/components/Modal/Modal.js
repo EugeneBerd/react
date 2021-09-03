@@ -6,11 +6,11 @@ class Modal extends PureComponent {
     const { header, closeButton, text, actions, handleClick } = this.props;
 
     return (
-      <div class="modal" onClick={handleClick}>
+      <div class="modal" onClick={() => handleClick()}>
         <div class="modal-content" onClick={(e) => e.stopPropagation()}>
           <h3>{header}</h3>
           {closeButton && (
-            <span class="close" onClick={handleClick}>
+            <span class="close" onClick={() => handleClick()}>
               &times;
             </span>
           )}
