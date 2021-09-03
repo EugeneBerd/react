@@ -23,7 +23,13 @@ class App extends React.Component {
             toggleModal={() => this.toggleModal()}
             cart={this.state.cart}
           />
-          <Cart icon className="cart" cart={this.state.cart.length} />
+
+          <Cart
+            emptyButton={() => this.emptyCart()}
+            icon
+            className="cart"
+            cart={this.state.cart.length}
+          />
         </header>
       </div>
     );
@@ -44,6 +50,12 @@ class App extends React.Component {
     this.setState(
       { cart: [...this.state.cart, itemId], modal: !this.state.modal },
       () => localStorage.setItem("cart", JSON.stringify(this.state.cart))
+    );
+  };
+
+  emptyCart = () => {
+    this.setState({ cart: [] }, () =>
+      localStorage.setItem("cart", JSON.stringify(this.state.cart))
     );
   };
 }
