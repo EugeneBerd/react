@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "name": "1450",
+    "vendor": "Риолис",
+    "price": "235",
+    "colors": "23",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/1450-spelye-yabloki-sh-30h30_0.jpg"
+  },
+  {
+    "id": "2",
+    "name": "СЖ-012",
+    "vendor": "Золотое Руно",
+    "price": "1148",
+    "colors": "16",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/szh-012-belyy-natyurmort-40h45_0.jpg"
+  },
+  {
+    "id": "3",
+    "name": "1774",
+    "vendor": "Риолис",
+    "price": "632",
+    "colors": "33",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/Nabor-dlya-vyshivaniya-Riolis-1774-Pervyj-vecher-v-sobstvennom-dome_0.jpg"
+  },
+  {
+    "id": "4",
+    "name": "М-012",
+    "vendor": "Жар Птица",
+    "price": "134",
+    "colors": "14",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/Nabor-dlya-vyshivaniya-ZHar-Pticza-M-012-Vostochnaya-uslada_0.jpg"
+  },
+  {
+    "id": "5",
+    "name": "ДЖ-013",
+    "vendor": "Золотое Руно",
+    "price": "1354",
+    "colors": "30",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/Nabor-dlya-vyshivaniya-Zolotoe-runo-DZH-013-Vstrecha-v-lesu-30x48_0.jpg"
+  },
+  {
+    "id": "6",
+    "name": "35344",
+    "vendor": "Dimensions",
+    "price": "582",
+    "colors": "43",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/Nabor-dlya-vyshivaniya-DIMENSIONS-35344-Kolibri-i-maki_0.jpg"
+  },
+  {
+    "id": "7",
+    "name": "М-075",
+    "vendor": "Жар Птица",
+    "price": "113",
+    "colors": "21",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/Nabor-dlya-vyshivaniya-ZHar-Pticza-M-075-Legkostb-polevyx-czvetov_0.jpg"
+  },
+  {
+    "id": "8",
+    "name": "13693",
+    "vendor": "Dimensions",
+    "price": "568",
+    "colors": "22",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/Nabor-dlya-vyshivaniya-DIMENSIONS-13693-Medovyj-mishka-(Honey-Bear)_0.jpg"
+  },
+  {
+    "id": "9",
+    "name": "ЧМ-050",
+    "vendor": "Золотое Руно",
+    "price": "905",
+    "colors": "61",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/Nabor-dlya-vyshivaniya-Zolotoe-runo-CHM-050-Vechernij-chaj_0.jpg"
+  },
+  {
+    "id": "10",
+    "name": "1678",
+    "vendor": "Риолис",
+    "price": "484",
+    "colors": "22",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/Nabor-dlya-vyshivaniya-Riolis-1678-Snezhnaya-zima_0.jpg"
+  },
+  {
+    "id": "11",
+    "name": "35157",
+    "vendor": "Dimensions",
+    "price": "540",
+    "colors": "32",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/Nabor-dlya-vyshivaniya-DIMENSIONS-35157-Primorskoe-kafe_0.jpg"
+  },
+  {
+    "id": "12",
+    "name": "1121",
+    "vendor": "Риолис",
+    "price": "215",
+    "colors": "18",
+    "img": "http://www.kaleydoskop-vishivki.com.ua/product_images/1121-kofe-30h24-sh_0.jpg"
+  }
+]
