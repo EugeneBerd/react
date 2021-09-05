@@ -12,23 +12,24 @@ class App extends React.Component {
     modal: false,
   };
   render() {
+    const { modal, pricelist, cart } = this.state;
     return (
       <div className="App">
         <header className="App-header">
           <ItemList
             addToCart={this.addToCart}
             addToFavs={this.addToFavs}
-            items={this.state.pricelist}
-            modal={this.state.modal}
+            items={pricelist}
+            modal={modal}
             toggleModal={() => this.toggleModal()}
-            cart={this.state.cart}
+            cart={cart}
           />
 
           <Cart
             emptyButton={() => this.emptyCart()}
             icon
             className="cart"
-            cart={this.state.cart.length}
+            cart={cart.length}
           />
         </header>
       </div>
@@ -42,8 +43,7 @@ class App extends React.Component {
   }
 
   toggleModal = () => {
-    console.log("first modal on click");
-    this.setState({ modal: false }, console.log("second modal on click"));
+    this.setState({ modal: false });
   };
 
   addToCart = (itemId) => {

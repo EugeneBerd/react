@@ -1,26 +1,14 @@
 import React, { PureComponent } from "react";
 import "./Star.scss";
+import PropTypes from "prop-types";
 
 class Star extends PureComponent {
-  // state = {
-  //   id: this.props.id,
-  //   fav: this.props.fav,
-  //   color: "black",
-  // };
-
-  // componentDidUpdate() {
-  //   if (this.state.fav.includes(this.state.id)) {
-  //     this.setState({ color: "green" });
-  //   }
-  // }
-
   render() {
     const { handler, color } = this.props;
 
     return (
       <div className="star-fav">
         <svg
-          // className={this.state.color}
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -34,5 +22,14 @@ class Star extends PureComponent {
     );
   }
 }
+
+Star.propTypes = {
+  color: PropTypes.string,
+  handler: PropTypes.func.isRequired,
+};
+
+Star.defaultProps = {
+  color: "black",
+};
 
 export default Star;

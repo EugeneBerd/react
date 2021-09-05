@@ -2,12 +2,14 @@ import React, { PureComponent } from "react";
 import "./ItemCard.scss";
 import Star from "../Star/Star";
 import Button from "../Button/Button";
+import PropTypes from "prop-types";
 
 class ItemCard extends PureComponent {
   state = { fav: false, modal: false };
   render() {
     const { item, addToFavs, addToCart } = this.props;
     const color = this.state.fav ? "green" : "black";
+
     return (
       <div className="gallery">
         <div className="cardTitle">
@@ -45,5 +47,11 @@ class ItemCard extends PureComponent {
     }
   }
 }
+
+ItemCard.propTypes = {
+  item: PropTypes.object.isRequired,
+  addToFavs: PropTypes.func.isRequired,
+  addToCart: PropTypes.func.isRequired,
+};
 
 export default ItemCard;

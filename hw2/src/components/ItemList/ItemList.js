@@ -2,19 +2,18 @@ import React, { PureComponent } from "react";
 import ItemCard from "../ItemCard/ItemCard";
 import "./ItemList.scss";
 import Modal from "../Modal/Modal";
+import PropTypes from "prop-types";
 
 class ItemList extends PureComponent {
   state = {
     fav: JSON.parse(localStorage.getItem("favourites")) || [],
-
-    modal: this.props.modal,
   };
   render() {
-    const { items, addToFavs, addToCart, modal, toggleModal } = this.props;
-    console.log("sss", this.state.modal);
+    const { items, addToCart, toggleModal, cart } = this.props;
+    const { fav, modal } = this.state;
     const itemsList = items.map((x) => (
       <ItemCard
-        fav={this.state.fav}
+        fav={fav}
         item={x}
         key={x.id}
         addToFavs={() => this.addToFavs(x.id)}
@@ -24,14 +23,14 @@ class ItemList extends PureComponent {
     return (
       <div className="galleryItems">
         {itemsList}
-        {this.state.modal && (
+        {modal && (
           <Modal
             header="Cart"
             text="Product succesfully added to cart"
             closeButton={true}
             handleClick={() => toggleModal()}
             actions={<button onClick={() => toggleModal()}>Okay</button>}
-            cart={this.props.cart.length}
+            cart={cart.length}
           />
         )}
       </div>
@@ -58,5 +57,11 @@ class ItemList extends PureComponent {
     this.setState({ modal: this.props.modal });
   }
 }
+
+ItemList.propTypes = {
+  items: PropTypes.array.isRequired,
+  toggleModal: PropTypes.func.isRequired,
+  addToCart: PropTypes.func.isRequired,
+};
 
 export default ItemList;

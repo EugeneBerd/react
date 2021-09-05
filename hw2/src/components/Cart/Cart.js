@@ -1,29 +1,30 @@
 import React, { PureComponent } from "react";
 import "./Cart.scss";
 import Button from "../Button/Button";
+import PropTypes from "prop-types";
 
 class Cart extends PureComponent {
   render() {
-    console.log(this.props.cart);
+    const { cart, className, emptyButton, icon } = this.props;
     return (
       <div>
-        {this.props.cart === 0 && (
-          <div className={this.props.className}>
+        {cart === 0 && (
+          <div className={className}>
             Корзина Пуста
-            <div class="cart-container">
-              <i class="gg-shopping-cart"></i>
+            <div className="cart-container">
+              <i className="gg-shopping-cart"></i>
             </div>
           </div>
         )}
-        {this.props.cart !== 0 && (
-          <div className={this.props.className}>
-            Товаров в Корзине: {this.props.cart}
-            {this.props.icon && (
-              <div class="cart-container">
-                <i class="gg-shopping-cart"></i>
+        {cart !== 0 && (
+          <div className={className}>
+            Товаров в Корзине: {cart}
+            {icon && (
+              <div className="cart-container">
+                <i className="gg-shopping-cart"></i>
               </div>
             )}
-            {this.props.emptyButton && this.props.cart !== 0 && (
+            {emptyButton && cart !== 0 && (
               <Button
                 buttonText="Empty Cart"
                 handleClick={() => this.props.emptyButton()}
@@ -36,5 +37,18 @@ class Cart extends PureComponent {
     );
   }
 }
+
+Cart.propTypes = {
+  cart: PropTypes.number.isRequired,
+  className: PropTypes.string,
+  emptyButton: PropTypes.func,
+  icon: PropTypes.bool,
+};
+
+Cart.defaultProps = {
+  className: "",
+  icon: false,
+  emptyButton: () => {},
+};
 
 export default Cart;
