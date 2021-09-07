@@ -1,0 +1,23 @@
+.star {
+  position: relative;
+}
+
+.gallery {
+  max-width: 200px;
+  border: 1px solid white;
+  margin: 5px 5px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  position: relative;
+}
+
+.galleryImg {
+  max-height: 150px;
+  max-width: 180px;
+  object-fit: cover;
+}
+
+.cardTitle {
+  margin: 5px;
+}

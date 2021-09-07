@@ -1,0 +1,16 @@
+.star-fav {
+  position: absolute;
+
+  bottom: 20px;
+  right: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  &:hover {
+    width: 23px;
+    height: 23px;
+    transition: 0.2s;
+    bottom: 22px;
+    right: 7px;
+  }
+}
