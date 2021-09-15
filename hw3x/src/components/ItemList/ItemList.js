@@ -2,7 +2,6 @@ import React from "react";
 import ItemCard from "../ItemCard/ItemCard";
 import "./ItemList.scss";
 import Modal from "../Modal/Modal";
-import PropTypes from "prop-types";
 
 const ItemList = ({ items, modal, fav, addToCart, setModal, cart, setFav }) => {
   const itemsList = items.map((x) => (
@@ -10,7 +9,8 @@ const ItemList = ({ items, modal, fav, addToCart, setModal, cart, setFav }) => {
       fav={fav}
       item={x}
       key={x.id}
-      addToFavs={() => addToFavs(x.id)}
+      cartButton
+      favAction={() => addToFavs(x.id)}
       addToCart={() => addToCart(x.id)}
     />
   ));
@@ -44,12 +44,6 @@ const ItemList = ({ items, modal, fav, addToCart, setModal, cart, setFav }) => {
       )}
     </div>
   );
-};
-
-ItemList.propTypes = {
-  items: PropTypes.array.isRequired,
-  toggleModal: PropTypes.func.isRequired,
-  addToCart: PropTypes.func.isRequired,
 };
 
 export default ItemList;

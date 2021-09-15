@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import ItemList from "../ItemList/ItemList";
 
@@ -22,7 +21,6 @@ const MainPage = () => {
       localStorage.setItem("store", JSON.stringify(res.data));
       localStorage.setItem("cart", JSON.stringify(cart));
       localStorage.setItem("favourites", JSON.stringify(fav));
-      console.log(fav);
     });
   }, [cart, fav]);
 
@@ -44,14 +42,13 @@ const MainPage = () => {
           setModal={() => setModal(!modal)}
           cart={cart}
         />
-        <Link className="nav-link" exact to="/cart" activeClassName="selected">
-          <Cart
-            emptyButton={() => setCart([])}
-            icon
-            className="cart"
-            cart={cart.length}
-          />
-        </Link>
+
+        <Cart
+          emptyButton={() => setCart([])}
+          icon
+          className="cart"
+          cart={cart.length}
+        />
       </header>
     </div>
   );

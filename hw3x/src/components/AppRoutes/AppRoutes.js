@@ -1,8 +1,8 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
-import Cart from "../Cart/Cart";
 import Favourites from "../Favourites/Favourites";
+import CartPage from "../CartPage/CartPage";
 
 const AppRoutes = () => {
   return (
@@ -11,7 +11,7 @@ const AppRoutes = () => {
         <MainPage />
       </Route>
       <Route exact path={"/cart"}>
-        <Cart />
+        <CartPage />
       </Route>
       <Route exact path={"/favourites"}>
         <Favourites />

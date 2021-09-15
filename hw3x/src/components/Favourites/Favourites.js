@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard";
-import ItemList from "../ItemList/ItemList";
+import "./favourites.scss";
 
 const Favourites = () => {
-  const parse = JSON.parse(localStorage.getItem("favourites")).forEach((s) => {
-    console.log(s);
-    JSON.parse(localStorage.getItem("store"))
-      .filter((e) => e.id !== s)
-      .map((x) => console.log(x.id));
-  });
+  const [fav, setFav] = useState(
+    JSON.parse(localStorage.getItem("favourites")) || []
+  );
 
-  console.log(parse);
-  // const parsePrice = JSON.parse(localStorage.getItem("store"))
-  //   .filter((e) => e.id !== "2")
-  //   .map((x) => <ItemCard fav="x" item={x} key={x.id} />);
+  useEffect(() => {
+    localStorage.setItem("favourites", JSON.stringify(fav));
+  }, [fav]);
 
-  return <div>{parse} ////</div>;
+  const store = JSON.parse(localStorage.getItem("store")),
+    res = store.filter((item) => fav.includes(item.id));
+  const itemsList = res.map((x) => (
+    <ItemCard fav="sss" item={x} key={x.id} delFavs={() => delFavs(x.id)} />
+  ));
+
+  const delFavs = (favId) => {
+    setFav(
+      JSON.parse(localStorage.getItem("favourites")).filter((e) => e !== favId)
+    );
+    localStorage.setItem("favourites", JSON.stringify(fav));
+  };
+
+  return <div className="galleryItems">{itemsList}</div>;
 };
 
 export default Favourites;

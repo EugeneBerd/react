@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import "./Modal.css";
 import Cart from "../Cart/Cart";
 import PropTypes from "prop-types";
