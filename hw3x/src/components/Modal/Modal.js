@@ -15,7 +15,7 @@ const Modal = ({ header, closeButton, text, actions, handleClick, cart }) => {
         )}
         <div className="check"></div>
         <p>{text}</p>
-        <Cart cart={cart} />
+        {cart && <Cart cart={cart} />}
         {actions}
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ItemCard.scss";
 import Star from "../Star/Star";
 import Button from "../Button/Button";
+import Modal from "../Modal/Modal";
 
 const ItemCard = ({
   fav,
@@ -13,6 +14,7 @@ const ItemCard = ({
   counts = 0,
   delItem,
 }) => {
+  const [modal, setModal] = useState(false);
   const [isFav, setIsFav] = useState(false);
   useEffect(() => {
     if (fav.includes(item.id)) {
@@ -65,9 +67,27 @@ const ItemCard = ({
         {delItem && (
           <Button
             buttonText="Remove item"
-            handleClick={() => delItem(item.id)}
+            handleClick={() => setModal(!modal)}
             className="button"
           ></Button>
+        )}
+        {modal && (
+          <Modal
+            header="Cart"
+            text="You sure you want to delete this product from cart?"
+            closeButton={true}
+            handleClick={() => setModal(!modal)}
+            actions={
+              <button
+                onClick={() => {
+                  delItem(item.id);
+                  setModal(!modal);
+                }}
+              >
+                Delete item
+              </button>
+            }
+          />
         )}
       </div>
     </div>

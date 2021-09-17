@@ -39,7 +39,7 @@ const MainPage = () => {
           // addToFavs={this.addToFavs}
           items={pricelist}
           modal={modal}
-          setModal={() => setModal(!modal)}
+          setModal={setModal}
           cart={cart}
         />
 
