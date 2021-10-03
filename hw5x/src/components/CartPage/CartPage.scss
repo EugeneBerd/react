@@ -1,0 +1,18 @@
+.galleryCart {
+  align-self: center;
+  width: 56vw;
+  text-align: center;
+  margin-bottom: 40px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.cartItems {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 40px;
+}

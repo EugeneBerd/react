@@ -1,0 +1,31 @@
+.navbar {
+  margin-left: calc(100vw - 100%);
+  display: flex;
+  list-style: none;
+  color: white;
+  background-color: whitesmoke;
+  width: calc(50vw);
+  height: 50px;
+  justify-content: center;
+  padding-left: 0;
+  align-items: center;
+  border-radius: 7px;
+}
+
+li {
+  border-right: 1px solid black;
+}
+
+li:last-of-type {
+  border-right: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  margin: 10px 20px;
+}
+
+.selected {
+  color: lightcoral;
+}
